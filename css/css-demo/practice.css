@@ -1,3 +1,14 @@
 #contact-info {
 	font-size: 0.8em
 }
+
+.job {
+	background: #e9e5dc;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.accomplishments {
+	font-size: 0.8em
+}
