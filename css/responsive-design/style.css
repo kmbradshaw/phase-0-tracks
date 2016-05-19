@@ -30,3 +30,34 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body {
+  max-width: 960px;
+  min-width: 220px;
+}
+
+main {
+  display: inline-block;
+  width: 756px;
+}
+
+#external-links {
+  display: inline-block;
+  vertical-align: top;
+  width: 10%;
+  margin: 0%;
+  padding: 0%;
+}
+
+@media screen and (max-width: 775px) {
+  figure {
+    height: 50%;
+    width: 50%;
+  }
+  body {
+    width: 100%;
+  }
+  #external-links {
+    width: 100%;
+  }
+}
