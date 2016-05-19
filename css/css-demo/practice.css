@@ -12,3 +12,11 @@
 .accomplishments {
 	font-size: 0.8em
 }
+
+h3:hover{
+  background-color: #33cccc
+}
+
+.volunteer-gig li {
+  background-color: #ff0000
+}
