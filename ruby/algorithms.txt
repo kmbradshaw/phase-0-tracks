@@ -16,4 +16,25 @@ When the view screen displays your desired floor number
 	-Wait for doors to open
 	-Exit Elevator
 
+Making Coffee 
+If partner is asleep
+	-Walk to kitchen
+	-Place Kettle on the Stove
+		-Turn on correct Stove Top
+	-Locate French Press
+		If French Press is dirty
+			-Clean
+		Else
+			-Add Coffee Grounds
+	-Until Kettle water begins to boil
+		-Wait patiently
+	-When Kettle water is boiling
+		-Add to French Press
+			-Press down lid
+				-Pour Coffee into a Mug
+If partner is awake
+	-Yell and ask for Coffee
+
+
+
 
