@@ -1,5 +1,20 @@
+puts "How many employees need to be processed?"
+number = gets.to_i
+
+while  number > 0
+number =  number -1
 puts "What is your name?"
 name = gets.chomp
+puts "Do you have an allergies? (type done when finished)"
+	allergies = gets.chomp
+until allergies == "done" || allergies == "sunlight"
+	allergies = gets.chomp
+end 
+	if allergies == "sunlight"
+		puts "probably a vampire"
+		next 
+	end
+
 puts "How old are you? What year were you born?"
 age = gets.to_i
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
@@ -18,3 +33,7 @@ elsif name == "Drake Cula" || name == "Tu Fang"
 else 
 	puts "Results inconclusive"
 end 
+end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends"
+abort 
