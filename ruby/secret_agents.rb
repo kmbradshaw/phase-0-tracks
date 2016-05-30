@@ -38,6 +38,10 @@ password
 end 
 
 p decrypt(encrypt("swordfish"))
+#the first thing we are doing is encrypting the string "swordfish" and getting a string of 
+#"txpsegjti" (we don't see this step since our encryption method doesn't involve printing the result)
+#from there the program is inputing the encrypted string into our decryption method returning the
+#value of swordfish
 
 
 #ask secret agent whether they need to encrypt or decrypt
