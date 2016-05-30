@@ -1,33 +1,44 @@
 
 #define a method for encryption
-#set condition that loops if password is greater than zero
-#index password and replace with next letter
-#print the result
 def encrypt(password)
-  index = 0
-  while password.to_s.length > index
-  word = password[index].next
-  word.sub!("!", " ")
-  print word
+index = 0
+  #loops if password is greater than zero
+  while password.length > index
+  #sets all of the letters in the given input equal to the next letter in the alphabet
+  password[index] = password[index].next
   index += 1
   end
+#keeps spaces as spaces instead of exlamation marks
+password.sub!("!", " ")
+#prints the encrypted password
+password
 end
 
 #define a method for decryption
-#set condition that loops if password is greater than zero
-#index password and replace with previous letter
-#print the result
 def decrypt(password)
-	index = 0
-	while password.to_s.length > index
-	word = (password[index].chr.ord - 1). chr
-	word.sub!("`", "z")
-	print word
+index = 0
+#sets condition that loops if password is greater than zero
+	while password.length > index
+	#sets all letters in the given input equal to the previous letter
+	#.ord is a set system of string values that evaluates string characters
+	#as an integer
+	#.chr uses the same system to evaluate integers as strings
+	#in the paranthesis we are setting each letter in the user input to an integer value
+	#subtracting one (thus moving backwards)
+	#then converting back into a string
+	#note - we would not be able to use this method if we weren't instructed to assume lowercase
+	#input and out (without accounting for more edge cases). 
+	password[index] = (password[index].ord - 1).chr
+	#removes edge case issues with z
+	password.sub!("`", "z")
 	index += 1
 	end
+#prints the decrypted password
+password
 end 
 
-decrypt(encrypt("swordfish"))
+p decrypt(encrypt("swordfish"))
+
 
 #ask secret agent whether they need to encrypt or decrypt
 puts "Do you need to encrypt or decrypt?"
