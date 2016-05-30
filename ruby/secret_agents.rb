@@ -10,7 +10,6 @@ index = 0
   end
 #keeps spaces as spaces instead of exlamation marks
 password.sub!("!", " ")
-#prints the encrypted password
 password
 end
 
@@ -33,7 +32,6 @@ index = 0
 	password.sub!("`", "z")
 	index += 1
 	end
-#prints the decrypted password
 password
 end 
 
