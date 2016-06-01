@@ -20,7 +20,9 @@ p " suspects".insert(0, "the usual") == "the usual suspects"
 
 p "The case of the disappearing last letter".chop == "The case of the disappearing last lette"
 
-p ("The mystery of the missing first letter".delete "T") == "he mystery of the missing first letter"
+p ("The mystery of the missing first letter".delete "T")  && 
+("The mystery of the missing first letter".slice(0..-2)) 
+== "he mystery of the missing first letter"
 
 p "Elementary,    my   dear        Watson!".squeeze(" ") == "Elementary, my dear Watson!"
 
