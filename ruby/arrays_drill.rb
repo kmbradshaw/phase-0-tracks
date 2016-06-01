@@ -18,7 +18,7 @@ build_array("one", "two", "three")
 explore = []
     p explore
 
-explore = ["one", "two", "three", "four", "five"]
+explore = explore + ["one", "two", "three", "four", "five"]
     p explore
 
 explore.delete_at(2)
