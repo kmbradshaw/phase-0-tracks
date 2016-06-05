@@ -40,3 +40,27 @@ our_pets.each do |type, name|
 end 
 
 p our_pets
+
+numbers = [1, 2, 3, 4, 5]
+p numbers
+
+numbers_letters = { 
+1 => "one",
+2 => "two",
+3 => "three",
+4 => "four",
+5 => "five",
+}
+p numbers_letters
+
+p numbers.delete_if {|less_than| less_than < 2 }
+p numbers_letters.delete_if{ |key, value| key < 4}
+
+p numbers.select { |digits| digits.even?}
+p numbers_letters.select {|key, value| key.even?}
+
+p numbers.keep_if{|more| more > 2}
+p numbers_letters.keep_if{ |key, value| key >4} 
+
+p numbers.reject{|last| last = 5}
+p numbers_letters.reject{|key, value| key = 5}
