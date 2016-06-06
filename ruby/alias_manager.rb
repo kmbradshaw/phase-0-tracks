@@ -33,20 +33,23 @@ def alias_name(name)
 	alias_response
 end 
 
-alias_storage = []
+alias_storage = {}
 
 loop do 
 	puts "Please enter your full name"
 	full_name = gets.chomp
-	puts "Your spy name is #{alias_name(full_name)}"
-	alias_storage << full_name
-	alias_storage << alias_name(full_name)
-	puts "If you would like to enter another name press enter, otherwise type 'q' for quit"
-	repeat = gets.chomp
+	name_split = full_name.split(" ")
+	first_name = name_split[0]
+	last_name = name_split[1]
+		puts "Your spy name is #{alias_name(last_name + " " + first_name)}"
+	alias_storage[full_name] = alias_name(last_name + " " + first_name)
+		puts "If you would like to enter another name press enter, otherwise type 'q' for quit"
+		repeat = gets.chomp
 	break if repeat == "q"
 end 
 
-p alias_storage 
+alias_storage.each do |k,v|
+	p "#{k} is actually #{v}"
+end 
 
-## Print out interpolate array
-## Switch First and Last Name
+
