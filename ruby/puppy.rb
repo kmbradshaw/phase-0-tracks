@@ -12,3 +12,6 @@
 #Love
 #Wag Tail
 #Bark at Squirrels 
+
+class Puppy
+end 
