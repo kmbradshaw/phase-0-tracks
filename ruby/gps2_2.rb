@@ -28,10 +28,10 @@
 # steps: iteration through hash, update visual display style
 # output: list - series of strings
 
-def create_list(item)
+def create_list(food_string)
   grocery_list = {}
-  new_item = item.split(" ")
-  new_item.each do |food|
+  new_food_array = food_string.split(" ")
+  new_food_array.each do |food|
     grocery_list[food] = 0
   end
   # p grocery_list
@@ -74,3 +74,10 @@ remove_item(grocery, "Lemonade")
 update_quantity(grocery, "Ice Cream", 1)
 
 print_list(grocery)
+
+#Pseudocode has always been a weak point for me, our guide was great about asking us to create specific pseudocode and reference it through the GPS
+#We decided to go with a Hash because it can easily store two variables together. An array would have be able to do the same but the hash was easier for us to iterate through. 
+#A method returns the variables or the changes to the variables 
+#You can pass strings, integers, defined variables, hashes and arrays through methods
+#You can pass information between methods by defining the information globally, using a class, or calling a method within another method
+#I feel like I gained a huge understanding of Hashes compared to where I started. Also our guide encouraged us to use specific variables which was something I had been lacking in the past. 
