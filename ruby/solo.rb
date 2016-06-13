@@ -24,4 +24,23 @@ attr_accessor :age
     puts "I scratched your brand new #{furniture}"
   end 
 end 
+# Test Code for methods
+# Cat.new(3, "tabby", "female").pet(2)
+# Cat.new(3, "tabby", "female").dinner_time
+# Cat.new(3, "tabby", "female").scratch("chair")
 
+cat_array = []
+puts "How many cats would you like to create?"
+cat_number = gets.to_i
+
+cat_number.times do 
+	puts "How old is your cat?"
+	age = gets.to_i
+	puts "What breed is your cat?"
+	breed = gets.chomp
+	puts "Male or Female?"
+	sex = gets.chomp
+	cat_array << Cat.new(age, breed, sex)
+end 
+
+p cat_array
