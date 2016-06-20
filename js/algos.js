@@ -42,6 +42,8 @@ function randomStringGenerator(length) {
 function randomStringArray(number) {
   var returnArray = [];
   for (var i=0; i<number; i++) {
+ // ran out of time
+ // couldn't figure out how to randomize the number so arbitrary picked ten
     returnArray.push(randomStringGenerator(10));
   }
   return returnArray;
@@ -61,4 +63,9 @@ var object3 = {cat: "Mewpers", dog: "Opal"};
 var object4 = {breed: "pitbull", color: "brown", eyes: "brown"}
 console.log(keyValueMatch(object3, object4)); // false
 // Tests for Release 2
-console.log(randomStringGenerator(3));
+console.log(randomStringArray(3));
+for (var i = 0, i<10; i++) {
+	var array = randomStringArray(5);
+	console.log(array);
+	console.log(longestPhrase(array));
+}
