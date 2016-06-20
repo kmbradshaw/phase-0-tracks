@@ -30,25 +30,23 @@ return match
 // define a function that takes an integer for length and builds and returns an array of strings of the given length
 	// define letters to be used for string creation
 	// create a function that combines those letters at varying lengths
-function randomStringGenerator(arrayLength) {
+
+function randomStringGenerator(length) {
   var alphabet = "abcdefghijklmnopqrstuvwxyz";
-  var stringArray = [];
-  var newWord = "";
-  
-  for (var i = 0; stringArray.length < arrayLength ;i++) {
-    var maxStringLength = Math.floor((Math.random() * 10) + 1);
-   
-
-   for (var x = 0; newWord.length < maxStringLength; x++)  {
-      var letterIndex = Math.floor((Math.random() * 25) + 1);
-      var letter = alphabet[letterIndex];  
-      newWord += letter;
-    }
-
-    stringArray.push(newWord);
+  var newString = '';
+  for (var i=0; i<length; i++) {
+    newString = newString + alphabet[Math.floor(Math.random() * (26 - 0))];
   }
-  return stringArray;
+  return newString;
 }
+function randomStringArray(number) {
+  var returnArray = [];
+  for (var i=0; i<number; i++) {
+    returnArray.push(randomStringGenerator(10));
+  }
+  return returnArray;
+}
+
 
 // DRIVER CODE
 // Tests for Release 0 (longestPhrase)
