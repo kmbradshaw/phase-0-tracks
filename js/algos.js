@@ -27,6 +27,29 @@ function keyValueMatch(object1, object2) {
 return match 
 }
 
+// define a function that takes an integer for length and builds and returns an array of strings of the given length
+	// define letters to be used for string creation
+	// create a function that combines those letters at varying lengths
+function randomStringGenerator(arrayLength) {
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var stringArray = [];
+  var newWord = "";
+  
+  for (var i = 0; stringArray.length < arrayLength ;i++) {
+    var maxStringLength = Math.floor((Math.random() * 10) + 1);
+   
+
+   for (var x = 0; newWord.length < maxStringLength; x++)  {
+      var letterIndex = Math.floor((Math.random() * 25) + 1);
+      var letter = alphabet[letterIndex];  
+      newWord += letter;
+    }
+
+    stringArray.push(newWord);
+  }
+  return stringArray;
+}
+
 // DRIVER CODE
 // Tests for Release 0 (longestPhrase)
 console.log(longestPhrase([ "test", "whatever", "ball"]));
@@ -40,3 +63,4 @@ var object3 = {cat: "Mewpers", dog: "Opal"};
 var object4 = {breed: "pitbull", color: "brown", eyes: "brown"}
 console.log(keyValueMatch(object3, object4)); // false
 // Tests for Release 2
+console.log(randomStringGenerator(3));
