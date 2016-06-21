@@ -30,3 +30,26 @@ Gary Johnson|Third Party / Independent
 Darrell Castle|Third Party / Independent
 
 5. DELETE FROM candidates WHERE party_id=3;
+
+RELEASE 3: RESEARCH ON YOUR OWN
+
+SELECT age FROM candidates CROSS JOIN party_affiliation;
+68
+68
+68
+74
+74
+74
+70
+70
+70
+45
+45
+45
+
+SELECT candidates.name FROM candidates INNER JOIN party_affiliation ON candidates.party_id = party_affiliation.id;
+
+Hillary Clinton
+Bernie Sanders
+Donald Trump
+Ted Cruz
