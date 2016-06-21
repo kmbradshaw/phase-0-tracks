@@ -1,0 +1,40 @@
+Locate desired floor number and current floor number using elevator directory. 
+If desired floor number is greater than current floor number press up
+ 	-Wait for elevator doors to open 
+	 -Enter the elevator
+Else if desired floor number is lower than current floor number press down
+	-Wait for elevator doors to open
+	-Enter the elevator
+Else you are on the correct floor, no need to use an elevator
+
+After entering the elevator 	
+	-Press desired floor number
+ 	-Watch the elevator view screen to track your current floor
+Until the elevator view screen shows your desired number
+ 	-Stay on Elevator 
+When the view screen displays your desired floor number
+	-Wait for doors to open
+	-Exit Elevator
+
+Making Coffee 
+If partner is asleep
+	-Walk to kitchen
+	-Place Kettle on the Stove
+		-Turn on correct Stove Top
+	-Locate French Press
+		If French Press is dirty
+			-Clean
+		Else
+			-Add Coffee Grounds
+	-Until Kettle water begins to boil
+		-Wait patiently
+	-When Kettle water is boiling
+		-Add to French Press
+			-Press down lid
+				-Pour Coffee into a Mug
+If partner is awake
+	-Yell and ask for Coffee
+
+
+
+
