@@ -1,0 +1,32 @@
+RELEASE 2: EXECUTE SQL QUERIES
+
+1. SELECT * FROM candidates;
+
+1|Hillary Clinton|68|true|1
+2|Bernie Sanders|74|true|1
+3|Donald Trump|70|false|2
+4|Ted Cruz|45|false|2
+5|Gary Johnson|63|true|3
+6|Darrell Castle|67|false|3
+
+2. UPDATE candidates SET age=68 WHERE id=6
+
+3. SELECT * FROM candidates, party_affiliation WHERE candidates.party_id = party_affiliation.id;
+
+1|Hillary Clinton|68|true|1|1|Democratic
+2|Bernie Sanders|74|true|1|1|Democratic
+3|Donald Trump|70|false|2|2|Republican
+4|Ted Cruz|45|false|2|2|Republican
+5|Gary Johnson|63|true|3|3|Third Party / Independent
+6|Darrell Castle|68|false|3|3|Third Party / Independent
+
+4. SELECT candidates.name, party_affiliation.name FROM candidates JOIN party_affiliation ON candidates.party_id = party_affiliation.id;
+
+Hillary Clinton|Democratic
+Bernie Sanders|Democratic
+Donald Trump|Republican
+Ted Cruz|Republican
+Gary Johnson|Third Party / Independent
+Darrell Castle|Third Party / Independent
+
+5. DELETE FROM candidates WHERE party_id=3;
