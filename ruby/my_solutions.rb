@@ -17,12 +17,13 @@ class VirusPredictor
     @population_density = population_density
   end
 #running predicted deaths and speed of spread methods
+
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
-
-  private
+  
+private 
 ## determining deaths based on population density and printing the state and number of deaths
   def predicted_deaths
     # predicted deaths is solely based on population density
