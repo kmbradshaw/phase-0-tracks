@@ -1,0 +1,15 @@
+SELECT * FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN businesses ON reviews.business_id = businesses.id;
+
+1|5|Awesome Mozzarella Sticks!|1|2|2|Mandy|Kaling|1|Amir's Towing
+2|3|Great Happy Hour specials but that's about it..|2|1|1|Bradford|Pitt|2|The Beagle Nightclub
+3|0|Cold Pizza is never okay|3|3|3|Angela|Jolie|3|Grundy Hollow Wedding Chapel
+
+SELECT users.first, users.last, businesses.name, reviews.stars, reviews.comment FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN businesses ON reviews.business_id = businesses.id;
+
+Mandy|Kaling|Amir's Towing|5|Awesome Mozzarella Sticks!
+Bradford|Pitt|The Beagle Nightclub|3|Great Happy Hour specials but that's about it..
+Angela|Jolie|Grundy Hollow Wedding Chapel|0|Cold Pizza is never okay
+
+SELECT users.first, users.last, businesses.name, reviews.stars, reviews.comment FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN businesses ON reviews.business_id = businesses.id WHERE businesses.id = 1;
+
+Mandy|Kaling|Amir's Towing|5|Awesome Mozzarella Sticks!
