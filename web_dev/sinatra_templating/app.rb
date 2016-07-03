@@ -17,6 +17,10 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/DBC_Cities/new' do 
+	erb :DBC_cities
+end 
+
 # create new students via
 # a form
 post '/students' do
